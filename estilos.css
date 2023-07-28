@@ -1,0 +1,144 @@
+body{
+text-align: center;
+background-color: bisque;
+color: #259dc2da;
+font-family: 'Noto Serif', serif; 
+}
+
+h3, h2{
+color: #4a90b8;
+background-color: #58534e6e;
+}
+
+.img1 {
+width: 260px;
+border-style:ridge;
+border-color: rgb(65, 56, 48);
+border-width: 4px;
+}
+
+.biografia {
+color: rgb(178, 209, 230);
+text-align:justify;
+margin: 0 auto;
+}
+
+li{
+text-align:left;
+color: white;
+font-family: 'Architects Daughter', cursive;
+}
+
+.intereses {
+color: #2cd5ff;
+font-family: 'Architects Daughter', cursive;}
+
+.Habilidades{
+background-color: hsla(92, 69%, 90%, 0.055);}
+
+body, head, footer{
+background-image: linear-gradient(to top, rgba(0.6,0.6,0.6,0.6), rgba(0.6,0.6,0.6,0.6)), url("https://p4.wallpaperbetter.com/wallpaper/897/1005/115/library-artwork-books-wallpaper-preview.jpg");
+background-size:auto
+}
+
+.footer { 
+color: rgba(255, 255, 255, 0.322);
+}
+
+.personajes {
+color: white
+}
+
+/*Edición del banner*/
+section{
+    margin: 0 auto; /*Con esto logré que las imagenes estuvieran centradas*/
+    display: flex;
+    width: 600px;
+    height: 430px; }
+
+section img {
+width: 0px; 
+flex-grow: 1;
+object-fit: cover;
+opacity: .8;
+transition: .7s ease-in-out;
+}
+
+section img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%); 
+}
+
+.preguntas{
+color:rgb(113, 211, 211);
+font-family: 'Dancing Script', cursive;
+}
+
+.pregunta1{
+color:rgb(64, 176, 190)
+}
+
+.pregunta2{
+color:rgb(64, 176, 190)}
+
+p{
+ text-align: center;
+}
+
+article{ 
+    position: relative;
+    width: 250px;
+    transition: all .3s ease;
+    margin: 0 auto;
+}
+
+article img:first-child{
+    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+}
+
+article img:last-child{
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+}
+
+article:hover{
+    transform:
+    perspective(250px) /*sirve para cambiar pespectiva*/
+    rotatex(10deg) /*sirve para rotar*/
+    translateY(-5%)
+    translateZ(0);
+}
+
+article::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image:
+    linear-gradient(
+        to bottom, transparent 10%,rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0) 95%);
+    opacity: 0;
+    transition: all .3s ease;      
+}
+
+article:hover::before{
+    opacity: 1;
+}
+
+article:hover img:last-child{
+    opacity: 1;
+    transform: translateY(10%);
+}
